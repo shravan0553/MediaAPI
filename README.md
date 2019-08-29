@@ -11,11 +11,18 @@ Akamai LUNA API Client. You would need a valid credentials with approrite Read/W
 
 ### Credentials:
 
-Please make sure that your API credentials are copied to a file named "credentials" under the same directory as the python scripts. You can use the "credentials" template uploaded here.
+Please make sure that your API credentials are copied to a file named "**credentials**" under the same directory as the python scripts. You can use the "credentials" template uploaded here.
+
+```
+client_secret = 
+host = 
+access_token = 
+client_token = 
+```
 
 ### Input:
 
-Update column "B" of the "input_streams.csv" file with the list of streamID's that need to be updated. 
+Update column "B" of the "**input_streams.csv**" file with the list of streamID's that need to be updated. 
 ```
 Stream Name   Stream ID
 Example Stream 	123445
