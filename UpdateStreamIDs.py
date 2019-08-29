@@ -109,7 +109,7 @@ def update_stream_id(s, streamId, accountSwitchKey,baseUrl):
 ################## Update the streamId JSON via PUT request ########################
 
     if streamUpdated == True:
-        response = s.put(urljoin(baseUrl, '/config-media-live/v2/msl-origin/streams/' + streamId + '?accountSwitchKey=' + accountSwitchKey), data=json.dumps(data, sort_keys=False), headers=headers)
+        response = s.put(urljoin(baseUrl, '/config-media-live/v2/msl-origin/streams/' + streamId), data=json.dumps(data, sort_keys=False), headers=headers)
         if response.status_code == 202:
             print "########## Succesfully updated the stream ID " + streamId + " Code:" + str(response.status_code)
         else :
@@ -125,7 +125,6 @@ if len(sys.argv) > 1:
     except:
         print('Error: Cannot find credential file or wrong format')
 
-    accountSwitchKey = str(credential['AccountSwitchKey'])
     baseUrl = 'https://' + str(credential['host']) + '/'
     clientToken = str(credential['client_token'])
     clientSecret = str(credential['client_secret'])
