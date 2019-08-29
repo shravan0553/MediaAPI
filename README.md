@@ -5,13 +5,15 @@ So far the script supports updates to XBC regions, Preferred EntryPoint regions 
 
 ### Pre-requisite:
 
-This script requires AkamaiOPEN library. Please follow the AkamaiOPEN instruction below and get edgegrid-python installed. https://github.com/akamai/AkamaiOPEN-edgegrid-python
-$ pip install edgegrid-python
-Akamai LUNA API Client. You would need a valid credentials with approrite Read/Write permissions in order to perform changes.
+1. This script requires AkamaiOPEN library. Please follow the AkamaiOPEN instruction below and get edgegrid-python installed.    https://github.com/akamai/AkamaiOPEN-edgegrid-python
+   ```
+   $ pip install edgegrid-python
+   ```
+2. You would need a valid API credentials with approrite Read/Write permissions in order to execute the script.
 
 ### Credentials:
 
-Please make sure that your API credentials are copied to a file named "**credentials**" under the same directory as the python scripts. You can use the "credentials" template uploaded here.
+Please make sure that your API credentials are copied to a file named "**credentials**" under the same directory as the python scripts. You can use the "**credentials**" template uploaded here.
 
 ```
 client_secret = 
