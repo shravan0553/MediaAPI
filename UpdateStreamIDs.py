@@ -40,7 +40,7 @@ def print_response(response):
 ################# Get the streamId JSON via GET request  ###################
 
 def update_stream_id(s, streamId, accountSwitchKey,baseUrl):
-    response = s.get(urljoin(baseUrl, '/config-media-live/v2/msl-origin/streams/' +streamId + '?accountSwitchKey=' + accountSwitchKey))
+    response = s.get(urljoin(baseUrl, '/config-media-live/v2/msl-origin/streams/' +streamId))
     data = json.loads(response.text, object_pairs_hook=OrderedDict)
     xbcRegionUpdated = False
     xbcBkpRegionUpdated = False
