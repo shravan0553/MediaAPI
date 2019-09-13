@@ -28,6 +28,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--xbc', help='use this option to update XBC regions',action='store_true')
 parser.add_argument('--ent', help='use this option to update entrypoint regions',action='store_true')
 parser.add_argument('--arc', help='use this option to update Archive Settings',action='store_true')
+parser.add_argument('--rem', help='use this option to delete the streams',action='store_true')
 args = parser.parse_args()
 
 ###################### FUNCTIONS #######################################
@@ -114,8 +115,18 @@ def update_stream_id(s, streamId, accountSwitchKey,baseUrl):
             print "########## Succesfully updated the stream ID " + streamId + " Code:" + str(response.status_code)
         else :
             print "########## Failed updating the stream ID " + streamId + " Error Code: " + str(response.text)
+            
+################### Stream deletion #########################
 
-
+    if args.rem:
+        print "######### Deleting Streams ###########"
+        response = s.delete(urljoin(baseUrl, '/config-media-live/v2/msl-origin/streams/' + streamId + '?accountSwitchKey=' + accountSwitchKey),headers=headers)
+        if response.status_code == 202:
+            print "########## Succesfully deleted the stream ID " + streamId + " Code:" + str(response.status_code)
+        else :
+            print "########## Failed deleting the stream ID " + streamId + " Error Code: " + str(response.text)
+        print "#########  End Deleting Streams  ###########"
+        
 ########################### MAIN #######################################
 
 if len(sys.argv) > 1:
