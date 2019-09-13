@@ -1,7 +1,7 @@
 ## Media Service Live 4 Stream Update Automation - Python
 
 This python script automates MSL4 stream updates using Akamai Media AI endpoint. https://developer.akamai.com/api/media_delivery/msl_stream_provisioning/v2.html#putaspecificstreamid
-So far the script supports updates to XBC regions, Preferred EntryPoint regions and Archive settings.
+So far the script supports updates to XBC regions, Preferred EntryPoint regions, Archiver settings and stream deletion.
 
 ### Pre-requisite:
 
@@ -43,11 +43,12 @@ Example Stream 	123456
 
 ### Options:
 ```bash
-usage: UpdateStreamIDs.py [-h] [--xbc] [--ent] [--arc]
+usage: UpdateStreamIDs.py [-h] [--xbc] [--ent] [--arc] [--rem]
 
 optional arguments:
   -h, --help  show this help message and exit
   --xbc       use this option to update XBC regions
   --ent       use this option to update entrypoint regions
   --arc       use this option to update Archive Settings
+  --rem       use this option to delete the streams
 ```
