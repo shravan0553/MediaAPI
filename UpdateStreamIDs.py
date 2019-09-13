@@ -21,7 +21,7 @@ bkpPreferredRegions = [31363, 31364]
 priPreferredRegions = [31438, 31439]
 
 # input file location
-input_file = 'turner_nba_streams1.csv'
+input_file = 'input_streams.csv'
 
 # initialize the command line arguments
 parser = argparse.ArgumentParser()
